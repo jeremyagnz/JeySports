@@ -1,0 +1,20 @@
+{
+  "AL East": [
+    { "teamId": 1, "team": "New York Yankees", "shortName": "NYY", "wins": 92, "losses": 70, "pct": ".568", "gb": "-", "streak": "W3", "last10": "7-3" },
+    { "teamId": 8, "team": "Boston Red Sox", "shortName": "BOS", "wins": 81, "losses": 81, "pct": ".500", "gb": "11", "streak": "L2", "last10": "5-5" }
+  ],
+  "AL West": [
+    { "teamId": 7, "team": "Houston Astros", "shortName": "HOU", "wins": 90, "losses": 72, "pct": ".556", "gb": "-", "streak": "W1", "last10": "6-4" },
+    { "teamId": 4, "team": "Seattle Mariners", "shortName": "SEA", "wins": 88, "losses": 74, "pct": ".543", "gb": "2", "streak": "W2", "last10": "7-3" }
+  ],
+  "NL West": [
+    { "teamId": 2, "team": "Los Angeles Dodgers", "shortName": "LAD", "wins": 98, "losses": 64, "pct": ".605", "gb": "-", "streak": "W5", "last10": "8-2" },
+    { "teamId": 5, "team": "Arizona Diamondbacks", "shortName": "ARI", "wins": 84, "losses": 78, "pct": ".519", "gb": "14", "streak": "W1", "last10": "5-5" }
+  ],
+  "NL East": [
+    { "teamId": 3, "team": "Atlanta Braves", "shortName": "ATL", "wins": 89, "losses": 73, "pct": ".549", "gb": "-", "streak": "W2", "last10": "6-4" }
+  ],
+  "NL Central": [
+    { "teamId": 6, "team": "St. Louis Cardinals", "shortName": "STL", "wins": 83, "losses": 79, "pct": ".512", "gb": "-", "streak": "L1", "last10": "4-6" }
+  ]
+}

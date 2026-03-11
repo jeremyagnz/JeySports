@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Juan Soto",
+    "team": "New York Yankees",
+    "teamId": 1,
+    "position": "OF",
+    "number": "22",
+    "photo": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/665742/headshot/67/current",
+    "stats": {
+      "avg": ".315",
+      "hr": 34,
+      "rbi": 102,
+      "ops": ".945",
+      "hits": 165,
+      "runs": 98,
+      "sb": 5,
+      "obp": ".453",
+      "slg": ".569"
+    },
+    "bio": "One of the best young hitters in baseball, known for his exceptional plate discipline."
+  },
+  {
+    "id": 2,
+    "name": "Aaron Judge",
+    "team": "New York Yankees",
+    "teamId": 1,
+    "position": "OF",
+    "number": "99",
+    "photo": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/592450/headshot/67/current",
+    "stats": {
+      "avg": ".287",
+      "hr": 58,
+      "rbi": 144,
+      "ops": ".975",
+      "hits": 157,
+      "runs": 113,
+      "sb": 6,
+      "obp": ".391",
+      "slg": ".584"
+    },
+    "bio": "Two-time AL MVP and one of the most powerful hitters in baseball history."
+  },
+  {
+    "id": 3,
+    "name": "Shohei Ohtani",
+    "team": "Los Angeles Dodgers",
+    "teamId": 2,
+    "position": "DH/P",
+    "number": "17",
+    "photo": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/660271/headshot/67/current",
+    "stats": {
+      "avg": ".310",
+      "hr": 44,
+      "rbi": 130,
+      "ops": "1.036",
+      "hits": 171,
+      "runs": 120,
+      "sb": 20,
+      "obp": ".390",
+      "slg": ".654"
+    },
+    "bio": "The greatest two-way player in baseball history, a generational talent."
+  },
+  {
+    "id": 4,
+    "name": "Mookie Betts",
+    "team": "Los Angeles Dodgers",
+    "teamId": 2,
+    "position": "SS",
+    "number": "50",
+    "photo": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/605141/headshot/67/current",
+    "stats": {
+      "avg": ".295",
+      "hr": 24,
+      "rbi": 88,
+      "ops": ".869",
+      "hits": 152,
+      "runs": 102,
+      "sb": 14,
+      "obp": ".369",
+      "slg": ".500"
+    },
+    "bio": "Elite defender and hitter, one of the most complete players in the game."
+  },
+  {
+    "id": 5,
+    "name": "Ronald Acuña Jr.",
+    "team": "Atlanta Braves",
+    "teamId": 3,
+    "position": "OF",
+    "number": "13",
+    "photo": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/660670/headshot/67/current",
+    "stats": {
+      "avg": ".320",
+      "hr": 41,
+      "rbi": 106,
+      "ops": ".999",
+      "hits": 178,
+      "runs": 127,
+      "sb": 65,
+      "obp": ".416",
+      "slg": ".596"
+    },
+    "bio": "Reigning NL MVP combining elite speed, power, and hitting ability."
+  },
+  {
+    "id": 6,
+    "name": "Freddie Freeman",
+    "team": "Los Angeles Dodgers",
+    "teamId": 2,
+    "position": "1B",
+    "number": "5",
+    "photo": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/518692/headshot/67/current",
+    "stats": {
+      "avg": ".282",
+      "hr": 22,
+      "rbi": 89,
+      "ops": ".843",
+      "hits": 168,
+      "runs": 90,
+      "sb": 8,
+      "obp": ".378",
+      "slg": ".465"
+    },
+    "bio": "Veteran first baseman and World Series hero, a key part of the Dodgers lineup."
+  },
+  {
+    "id": 7,
+    "name": "Julio Rodríguez",
+    "team": "Seattle Mariners",
+    "teamId": 4,
+    "position": "OF",
+    "number": "44",
+    "photo": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/677594/headshot/67/current",
+    "stats": {
+      "avg": ".275",
+      "hr": 32,
+      "rbi": 97,
+      "ops": ".855",
+      "hits": 155,
+      "runs": 101,
+      "sb": 37,
+      "obp": ".329",
+      "slg": ".526"
+    },
+    "bio": "Young star combining power and speed, one of the most exciting players in baseball."
+  },
+  {
+    "id": 8,
+    "name": "Corbin Carroll",
+    "team": "Arizona Diamondbacks",
+    "teamId": 5,
+    "position": "OF",
+    "number": "7",
+    "photo": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/682998/headshot/67/current",
+    "stats": {
+      "avg": ".290",
+      "hr": 25,
+      "rbi": 76,
+      "ops": ".871",
+      "hits": 162,
+      "runs": 108,
+      "sb": 54,
+      "obp": ".360",
+      "slg": ".511"
+    },
+    "bio": "NL Rookie of the Year who quickly established himself as one of the best in the league."
+  },
+  {
+    "id": 9,
+    "name": "Paul Goldschmidt",
+    "team": "St. Louis Cardinals",
+    "teamId": 6,
+    "position": "1B",
+    "number": "46",
+    "photo": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/502671/headshot/67/current",
+    "stats": {
+      "avg": ".268",
+      "hr": 22,
+      "rbi": 81,
+      "ops": ".815",
+      "hits": 143,
+      "runs": 77,
+      "sb": 4,
+      "obp": ".355",
+      "slg": ".460"
+    },
+    "bio": "Elite first baseman and former NL MVP known for consistency and power."
+  },
+  {
+    "id": 10,
+    "name": "Yordan Alvarez",
+    "team": "Houston Astros",
+    "teamId": 7,
+    "position": "DH",
+    "number": "44",
+    "photo": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/670541/headshot/67/current",
+    "stats": {
+      "avg": ".304",
+      "hr": 39,
+      "rbi": 115,
+      "ops": ".998",
+      "hits": 163,
+      "runs": 95,
+      "sb": 2,
+      "obp": ".400",
+      "slg": ".598"
+    },
+    "bio": "One of the most feared hitters in baseball, an offensive force for the Astros."
+  }
+]

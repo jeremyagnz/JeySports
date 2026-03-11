@@ -1,0 +1,7 @@
+{
+  "name": "@jeysports/data",
+  "version": "1.0.0",
+  "description": "Mock data for JeySports baseball app",
+  "main": "index.js",
+  "type": "module"
+}
