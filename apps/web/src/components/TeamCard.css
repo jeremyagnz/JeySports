@@ -1,0 +1,98 @@
+.team-card {
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-card-header {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team-logo {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.team-info {
+  flex: 1;
+}
+
+.team-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.team-meta {
+  font-size: 0.75rem;
+  color: var(--color-gray-dark);
+  margin-top: 0.2rem;
+}
+
+.team-badge {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--color-gray);
+  background: rgba(255,255,255,0.05);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius);
+}
+
+.team-card-body {
+  padding: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.team-record {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.record-item {
+  text-align: center;
+}
+
+.record-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.record-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.record-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--color-border);
+}
+
+.team-description {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  line-height: 1.5;
+}
+
+.team-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
