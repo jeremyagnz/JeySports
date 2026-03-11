@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 
 const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME || 'admin'
-const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || 'admin123'
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || '123123'
 const SESSION_KEY = 'jeysports_session'
 
 const AuthContext = createContext(null)
