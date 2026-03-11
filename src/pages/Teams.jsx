@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useAuth } from '../auth/AuthContext'
 import { getAll, add, update, remove } from '../data/store'
 
-const EMPTY_FORM = { nombre: '', ciudad: '', fundacion: '', escudo: '🏆' }
-const ESCUDOS = ['🦁', '🦅', '🐯', '🐺', '⚡', '🔥', '🌊', '🌟', '🏆', '⚽']
+const EMPTY_FORM = { nombre: '', ciudad: '', fundacion: '', escudo: '⚾' }
+const ESCUDOS = ['🦁', '🦅', '🐯', '🐺', '⚡', '🔥', '🌊', '🌟', '⚾', '🏟️']
 
 export default function Teams() {
   const { isAdmin } = useAuth()
@@ -44,7 +44,7 @@ export default function Teams() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">🛡️ Equipos</h1>
+        <h1 className="text-2xl font-bold text-gray-800">🏟️ Equipos</h1>
         {isAdmin && (
           <button
             onClick={openNew}
@@ -90,7 +90,7 @@ export default function Teams() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Escudo</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Logo</label>
               <div className="flex flex-wrap gap-2">
                 {ESCUDOS.map((e) => (
                   <button

@@ -2,8 +2,19 @@ import { useState } from 'react'
 import { useAuth } from '../auth/AuthContext'
 import { getAll, add, update, remove } from '../data/store'
 
-const POSITIONS = ['Portero', 'Defensa', 'Mediocampista', 'Delantero']
-const EMPTY_FORM = { nombre: '', posicion: 'Portero', equipo: '', dorsal: '' }
+const POSITIONS = [
+  'Pitcher',
+  'Catcher',
+  'Primera Base',
+  'Segunda Base',
+  'Tercera Base',
+  'Shortstop',
+  'Jardinero Izquierdo',
+  'Jardinero Central',
+  'Jardinero Derecho',
+  'Bateador Designado',
+]
+const EMPTY_FORM = { nombre: '', posicion: 'Pitcher', equipo: '', dorsal: '' }
 
 export default function Players() {
   const { isAdmin } = useAuth()
@@ -44,7 +55,7 @@ export default function Players() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">🏃 Jugadores</h1>
+        <h1 className="text-2xl font-bold text-gray-800">🧢 Jugadores</h1>
         {isAdmin && (
           <button
             onClick={openNew}
@@ -88,7 +99,7 @@ export default function Players() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Dorsal</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Número</label>
               <input
                 type="number"
                 min="1"
@@ -113,13 +124,13 @@ export default function Players() {
 
       <div className="bg-white rounded-xl shadow overflow-hidden">
         <table className="w-full text-sm">
-          <thead className="bg-blue-800 text-white">
+          <thead className="bg-blue-900 text-white">
             <tr>
               <th className="px-4 py-3 text-left">#</th>
               <th className="px-4 py-3 text-left">Nombre</th>
               <th className="px-4 py-3 text-left">Posición</th>
               <th className="px-4 py-3 text-left">Equipo</th>
-              <th className="px-4 py-3 text-left">Dorsal</th>
+              <th className="px-4 py-3 text-left">Núm.</th>
               {isAdmin && <th className="px-4 py-3 text-right">Acciones</th>}
             </tr>
           </thead>

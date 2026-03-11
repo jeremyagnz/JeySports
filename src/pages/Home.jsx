@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-20 px-4 text-center">
-        <div className="text-6xl mb-4">⚽</div>
+      <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20 px-4 text-center">
+        <div className="text-6xl mb-4">⚾</div>
         <h1 className="text-4xl font-bold mb-3">Bienvenido a JeySports</h1>
         <p className="text-blue-200 text-lg max-w-xl mx-auto">
-          Tu plataforma de gestión deportiva. Consulta jugadores, equipos, calendario y clasificación.
+          Tu plataforma de béisbol. Consulta jugadores, equipos, calendario de juegos y posiciones al estilo MLB.
         </p>
         {isAdmin && (
           <Link
@@ -34,10 +34,10 @@ export default function Home() {
       {/* Cards */}
       <div className="max-w-5xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { to: '/jugadores', icon: '🏃', title: 'Jugadores', desc: 'Consulta el roster completo de jugadores' },
-          { to: '/equipos', icon: '🛡️', title: 'Equipos', desc: 'Conoce todos los equipos de la liga' },
-          { to: '/calendario', icon: '📅', title: 'Calendario', desc: 'Revisa los próximos partidos' },
-          { to: '/clasificacion', icon: '🏆', title: 'Clasificación', desc: 'Tabla de posiciones actualizada' },
+          { to: '/jugadores', icon: '🧢', title: 'Jugadores', desc: 'Consulta el roster completo de peloteros' },
+          { to: '/equipos', icon: '🏟️', title: 'Equipos', desc: 'Conoce todos los equipos de la liga' },
+          { to: '/calendario', icon: '📅', title: 'Calendario', desc: 'Revisa los próximos juegos' },
+          { to: '/clasificacion', icon: '🏆', title: 'Posiciones', desc: 'Tabla de posiciones al estilo MLB' },
         ].map((item) => (
           <Link
             key={item.to}

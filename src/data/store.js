@@ -2,28 +2,30 @@
 
 const defaultData = {
   jugadores: [
-    { id: 1, nombre: 'Carlos López', posicion: 'Delantero', equipo: 'Leones FC', dorsal: 9 },
-    { id: 2, nombre: 'Miguel Torres', posicion: 'Mediocampista', equipo: 'Águilas SC', dorsal: 8 },
-    { id: 3, nombre: 'Juan Pérez', posicion: 'Defensa', equipo: 'Leones FC', dorsal: 4 },
-    { id: 4, nombre: 'Andrés Ruiz', posicion: 'Portero', equipo: 'Tigres CF', dorsal: 1 },
+    { id: 1, nombre: 'Carlos Rodríguez', posicion: 'Pitcher', equipo: 'Leones', dorsal: 35 },
+    { id: 2, nombre: 'Miguel Torres', posicion: 'Catcher', equipo: 'Águilas', dorsal: 12 },
+    { id: 3, nombre: 'Juan Pérez', posicion: 'Primera Base', equipo: 'Leones', dorsal: 23 },
+    { id: 4, nombre: 'Andrés Ruiz', posicion: 'Shortstop', equipo: 'Tigres', dorsal: 7 },
+    { id: 5, nombre: 'Luis García', posicion: 'Jardinero Central', equipo: 'Lobos', dorsal: 14 },
+    { id: 6, nombre: 'Roberto Sánchez', posicion: 'Segunda Base', equipo: 'Águilas', dorsal: 4 },
   ],
   equipos: [
-    { id: 1, nombre: 'Leones FC', ciudad: 'Quito', fundacion: 2005, escudo: '🦁' },
-    { id: 2, nombre: 'Águilas SC', ciudad: 'Guayaquil', fundacion: 2010, escudo: '🦅' },
-    { id: 3, nombre: 'Tigres CF', ciudad: 'Cuenca', fundacion: 1998, escudo: '🐯' },
-    { id: 4, nombre: 'Lobos United', ciudad: 'Ambato', fundacion: 2015, escudo: '🐺' },
+    { id: 1, nombre: 'Leones', ciudad: 'Quito', fundacion: 2005, escudo: '🦁' },
+    { id: 2, nombre: 'Águilas', ciudad: 'Guayaquil', fundacion: 2010, escudo: '🦅' },
+    { id: 3, nombre: 'Tigres', ciudad: 'Cuenca', fundacion: 1998, escudo: '🐯' },
+    { id: 4, nombre: 'Lobos', ciudad: 'Ambato', fundacion: 2015, escudo: '🐺' },
   ],
   partidos: [
-    { id: 1, local: 'Leones FC', visitante: 'Águilas SC', fecha: '2026-03-15', hora: '15:00', estadio: 'Estadio Olímpico', resultado: '' },
-    { id: 2, local: 'Tigres CF', visitante: 'Lobos United', fecha: '2026-03-16', hora: '17:00', estadio: 'Estadio Cuenca', resultado: '' },
-    { id: 3, local: 'Águilas SC', visitante: 'Tigres CF', fecha: '2026-03-22', hora: '16:00', estadio: 'Estadio Monumental', resultado: '2-1' },
-    { id: 4, local: 'Lobos United', visitante: 'Leones FC', fecha: '2026-03-23', hora: '18:00', estadio: 'Estadio Bellavista', resultado: '0-3' },
+    { id: 1, local: 'Leones', visitante: 'Águilas', fecha: '2026-03-15', hora: '15:00', estadio: 'Estadio Nacional', resultado: '' },
+    { id: 2, local: 'Tigres', visitante: 'Lobos', fecha: '2026-03-16', hora: '17:00', estadio: 'Estadio del Sur', resultado: '' },
+    { id: 3, local: 'Águilas', visitante: 'Tigres', fecha: '2026-03-22', hora: '16:00', estadio: 'Estadio Costa', resultado: '5-3' },
+    { id: 4, local: 'Lobos', visitante: 'Leones', fecha: '2026-03-23', hora: '18:00', estadio: 'Estadio Norte', resultado: '1-7' },
   ],
   clasificacion: [
-    { id: 1, equipo: 'Leones FC', pj: 2, pg: 2, pe: 0, pp: 0, gf: 5, gc: 1, pts: 6 },
-    { id: 2, equipo: 'Tigres CF', pj: 1, pg: 1, pe: 0, pp: 0, gf: 2, gc: 1, pts: 3 },
-    { id: 3, equipo: 'Águilas SC', pj: 2, pg: 1, pe: 0, pp: 1, gf: 3, gc: 3, pts: 3 },
-    { id: 4, equipo: 'Lobos United', pj: 2, pg: 0, pe: 0, pp: 2, gf: 1, gc: 6, pts: 0 },
+    { id: 1, equipo: 'Leones', j: 2, g: 2, p: 0, pct: '1.000', gb: '-', rf: 10, rc: 4 },
+    { id: 2, equipo: 'Tigres', j: 1, g: 1, p: 0, pct: '1.000', gb: '0.5', rf: 5, rc: 3 },
+    { id: 3, equipo: 'Águilas', j: 2, g: 1, p: 1, pct: '.500', gb: '1', rf: 8, rc: 8 },
+    { id: 4, equipo: 'Lobos', j: 2, g: 0, p: 2, pct: '.000', gb: '2', rf: 4, rc: 12 },
   ],
 }
 

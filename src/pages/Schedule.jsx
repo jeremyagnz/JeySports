@@ -41,7 +41,7 @@ export default function Schedule() {
   }
 
   const handleDelete = (id) => {
-    if (confirm('¿Eliminar este partido?')) {
+    if (confirm('¿Eliminar este juego?')) {
       setMatches(remove('partidos', id))
     }
   }
@@ -51,20 +51,20 @@ export default function Schedule() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">📅 Calendario de Partidos</h1>
+        <h1 className="text-2xl font-bold text-gray-800">📅 Calendario de Juegos</h1>
         {isAdmin && (
           <button
             onClick={openNew}
             className="bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold px-4 py-2 rounded-lg"
           >
-            + Añadir Partido
+            + Añadir Juego
           </button>
         )}
       </div>
 
       {showForm && isAdmin && (
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
-          <h2 className="font-semibold text-blue-800 mb-4">{editing ? 'Editar Partido' : 'Nuevo Partido'}</h2>
+          <h2 className="font-semibold text-blue-800 mb-4">{editing ? 'Editar Juego' : 'Nuevo Juego'}</h2>
           <form onSubmit={handleSave} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { label: 'Equipo Local', key: 'local', type: 'text' },
@@ -72,7 +72,7 @@ export default function Schedule() {
               { label: 'Fecha', key: 'fecha', type: 'date' },
               { label: 'Hora', key: 'hora', type: 'time' },
               { label: 'Estadio', key: 'estadio', type: 'text' },
-              { label: 'Resultado (ej: 2-1)', key: 'resultado', type: 'text' },
+              { label: 'Resultado (ej: 7-3)', key: 'resultado', type: 'text' },
             ].map(({ label, key, type }) => (
               <div key={key}>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
@@ -109,7 +109,7 @@ export default function Schedule() {
               </div>
               {m.resultado && (
                 <span className="inline-block mt-1 bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded">
-                  Resultado: {m.resultado}
+                  Final: {m.resultado}
                 </span>
               )}
             </div>
@@ -122,7 +122,7 @@ export default function Schedule() {
           </div>
         ))}
         {matches.length === 0 && (
-          <p className="text-gray-400">No hay partidos programados</p>
+          <p className="text-gray-400">No hay juegos programados</p>
         )}
       </div>
     </div>
