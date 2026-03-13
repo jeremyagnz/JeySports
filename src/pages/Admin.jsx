@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext'
 
 const SECTIONS = [
-  { to: '/jugadores', icon: '🏃', label: 'Jugadores', desc: 'Gestionar jugadores de la liga' },
-  { to: '/equipos', icon: '🛡️', label: 'Equipos', desc: 'Gestionar equipos' },
-  { to: '/calendario', icon: '📅', label: 'Calendario', desc: 'Gestionar partidos y fechas' },
-  { to: '/clasificacion', icon: '🏆', label: 'Clasificación', desc: 'Actualizar tabla de posiciones' },
+  { to: '/jugadores', icon: '🧢', label: 'Jugadores', desc: 'Gestionar el roster de peloteros' },
+  { to: '/equipos', icon: '🏟️', label: 'Equipos', desc: 'Gestionar equipos de béisbol' },
+  { to: '/calendario', icon: '📅', label: 'Calendario', desc: 'Gestionar juegos y fechas' },
+  { to: '/clasificacion', icon: '🏆', label: 'Posiciones', desc: 'Actualizar tabla de posiciones MLB' },
 ]
 
 export default function Admin() {
@@ -13,8 +13,8 @@ export default function Admin() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
-      <div className="bg-blue-800 text-white rounded-2xl p-8 mb-8 text-center">
-        <div className="text-5xl mb-3">🔧</div>
+      <div className="bg-blue-900 text-white rounded-2xl p-8 mb-8 text-center">
+        <div className="text-5xl mb-3">⚾</div>
         <h1 className="text-3xl font-bold">Panel de Administración</h1>
         <p className="text-blue-200 mt-2">Bienvenido, <span className="font-semibold text-yellow-300">{user?.username}</span>. Tienes acceso completo de administrador.</p>
       </div>

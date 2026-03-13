@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useAuth } from '../auth/AuthContext'
 import { getAll, add, update, remove } from '../data/store'
 
-const EMPTY_FORM = { equipo: '', pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
-const NUM_FIELDS = ['pj', 'pg', 'pe', 'pp', 'gf', 'gc', 'pts']
+const EMPTY_FORM = { equipo: '', j: 0, g: 0, p: 0, pct: '.000', gb: '-', rf: 0, rc: 0 }
+const NUM_FIELDS = ['j', 'g', 'p', 'rf', 'rc']
 
 export default function Standings() {
   const { isAdmin } = useAuth()
@@ -12,7 +12,7 @@ export default function Standings() {
   const [form, setForm] = useState(EMPTY_FORM)
   const [showForm, setShowForm] = useState(false)
 
-  const sorted = [...rows].sort((a, b) => b.pts - a.pts || b.gf - b.gc - (a.gf - a.gc))
+  const sorted = [...rows].sort((a, b) => Number(b.g) - Number(a.g) || (Number(b.rf) - Number(b.rc)) - (Number(a.rf) - Number(a.rc)))
 
   const openNew = () => {
     setEditing(null)
@@ -22,7 +22,7 @@ export default function Standings() {
 
   const openEdit = (row) => {
     setEditing(row.id)
-    setForm({ equipo: row.equipo, pj: row.pj, pg: row.pg, pe: row.pe, pp: row.pp, gf: row.gf, gc: row.gc, pts: row.pts })
+    setForm({ equipo: row.equipo, j: row.j, g: row.g, p: row.p, pct: row.pct, gb: row.gb, rf: row.rf, rc: row.rc })
     setShowForm(true)
   }
 
@@ -45,19 +45,19 @@ export default function Standings() {
   }
 
   const COLS = [
-    { key: 'pj', label: 'PJ' },
-    { key: 'pg', label: 'PG' },
-    { key: 'pe', label: 'PE' },
-    { key: 'pp', label: 'PP' },
-    { key: 'gf', label: 'GF' },
-    { key: 'gc', label: 'GC' },
-    { key: 'pts', label: 'Pts' },
+    { key: 'j', label: 'J', title: 'Juegos Jugados' },
+    { key: 'g', label: 'G', title: 'Ganados' },
+    { key: 'p', label: 'P', title: 'Perdidos' },
+    { key: 'pct', label: 'PCT', title: 'Porcentaje' },
+    { key: 'gb', label: 'GB', title: 'Juegos Detrás' },
+    { key: 'rf', label: 'RF', title: 'Carreras a Favor' },
+    { key: 'rc', label: 'RC', title: 'Carreras en Contra' },
   ]
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">🏆 Clasificación</h1>
+        <h1 className="text-2xl font-bold text-gray-800">🏆 Tabla de Posiciones</h1>
         {isAdmin && (
           <button
             onClick={openNew}
@@ -93,6 +93,24 @@ export default function Standings() {
                 />
               </div>
             ))}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">PCT</label>
+              <input
+                value={form.pct}
+                placeholder=".500"
+                onChange={(e) => setForm({ ...form, pct: e.target.value })}
+                className="w-full border rounded-lg px-3 py-2 text-sm"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">GB</label>
+              <input
+                value={form.gb}
+                placeholder="- ó 1.5"
+                onChange={(e) => setForm({ ...form, gb: e.target.value })}
+                className="w-full border rounded-lg px-3 py-2 text-sm"
+              />
+            </div>
             <div className="col-span-2 sm:col-span-4 flex gap-3">
               <button type="submit" className="bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">
                 {editing ? 'Guardar Cambios' : 'Añadir'}
@@ -107,12 +125,12 @@ export default function Standings() {
 
       <div className="bg-white rounded-xl shadow overflow-hidden">
         <table className="w-full text-sm">
-          <thead className="bg-blue-800 text-white">
+          <thead className="bg-blue-900 text-white">
             <tr>
               <th className="px-4 py-3 text-left">#</th>
               <th className="px-4 py-3 text-left">Equipo</th>
-              {COLS.map(({ key, label }) => (
-                <th key={key} className="px-3 py-3 text-center">{label}</th>
+              {COLS.map(({ key, label, title }) => (
+                <th key={key} className="px-3 py-3 text-center" title={title}>{label}</th>
               ))}
               {isAdmin && <th className="px-4 py-3 text-right">Acciones</th>}
             </tr>
@@ -123,7 +141,7 @@ export default function Standings() {
                 <td className="px-4 py-3 text-gray-400 font-medium">{i + 1}</td>
                 <td className="px-4 py-3 font-medium text-gray-800">{row.equipo}</td>
                 {COLS.map(({ key }) => (
-                  <td key={key} className={`px-3 py-3 text-center ${key === 'pts' ? 'font-bold text-blue-700' : 'text-gray-600'}`}>
+                  <td key={key} className={`px-3 py-3 text-center ${key === 'pct' ? 'font-bold text-blue-700' : 'text-gray-600'}`}>
                     {row[key]}
                   </td>
                 ))}
@@ -136,10 +154,20 @@ export default function Standings() {
               </tr>
             ))}
             {rows.length === 0 && (
-              <tr><td colSpan={isAdmin ? 10 : 9} className="px-4 py-8 text-center text-gray-400">No hay datos de clasificación</td></tr>
+              <tr><td colSpan={isAdmin ? 10 : 9} className="px-4 py-8 text-center text-gray-400">No hay datos de posiciones</td></tr>
             )}
           </tbody>
         </table>
+      </div>
+
+      <div className="mt-4 text-xs text-gray-400 flex flex-wrap gap-x-4 gap-y-1">
+        <span><strong>J</strong> = Juegos Jugados</span>
+        <span><strong>G</strong> = Ganados</span>
+        <span><strong>P</strong> = Perdidos</span>
+        <span><strong>PCT</strong> = Porcentaje</span>
+        <span><strong>GB</strong> = Juegos Detrás</span>
+        <span><strong>RF</strong> = Carreras a Favor</span>
+        <span><strong>RC</strong> = Carreras en Contra</span>
       </div>
     </div>
   )

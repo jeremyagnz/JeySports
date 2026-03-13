@@ -15,11 +15,11 @@ export default function Navbar() {
     location.pathname === path ? 'text-yellow-300 font-semibold' : 'text-white hover:text-yellow-200'
 
   return (
-    <nav className="bg-blue-800 shadow-lg">
+    <nav className="bg-blue-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl">⚽</span>
+            <span className="text-2xl">⚾</span>
             <span className="text-white font-bold text-xl tracking-wide">JeySports</span>
           </Link>
 
@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link to="/jugadores" className={`text-sm ${isActive('/jugadores')}`}>Jugadores</Link>
             <Link to="/equipos" className={`text-sm ${isActive('/equipos')}`}>Equipos</Link>
             <Link to="/calendario" className={`text-sm ${isActive('/calendario')}`}>Calendario</Link>
-            <Link to="/clasificacion" className={`text-sm ${isActive('/clasificacion')}`}>Clasificación</Link>
+            <Link to="/clasificacion" className={`text-sm ${isActive('/clasificacion')}`}>Posiciones</Link>
 
             {isAdmin && (
               <Link to="/admin" className={`text-sm ${isActive('/admin')}`}>
